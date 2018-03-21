@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>Draw GeoJSON points</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
+  <style>
+  body { margin:0; padding:0; }
+  #map { position:absolute; top:0; bottom:0; width:100%; }
+  </style>
+</head>
+<body>
+
+  <div id='map'></div>
+  <script>
+  mapboxgl.accessToken = 'pk.eyJ1Ijoic25laGFzYW50aG9zaCIsImEiOiJjamVtbXRnb3EwNzI4MzNtbTZtNDNldGE1In0.WXYWA8ovqMCB7GYoI2kIiQ';
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/light-v9',
+    center: [76.1, 13.8],
+    zoom: 3.60
+  });
+  map.on('load', function () {
+
+    map.addLayer({
+        "id": "points",
+        "type": "symbol",
+        "source": {
+            "type": "geojson",
+            "data": {
+                "type": "FeatureCollection", 
+                "features": [{
+                    "type":"Feature",
+                    "geometry":{
+                        "type":"Point",
+                        "coordinates":[70.4680319968611,21.50601102743464]
+                    },
+                    "properties":{
+                        
+                        "name":"Volunteering Opportunities",
+                        "icon":"ngo"
+                    }
+                },{
+                    "type":"Feature",
+                    "geometry":{
+                        "type":"Point",
+                        "coordinates":[72.81610147096217,19.0108349723464]
+                    },
+                    "properties":{
+                        "name":"Blind service asociation",
+                        "icon":"ngo"
+                    }
+              
+                },{
+                    "type":"Feature",
+                    "geometry":{
+                        "type":"Point",
+                        "coordinates":[73.63694426603615,24.632414536361992]
+                    },
+                    "properties":{
+                        "name":"Animal Aid",
+                        "icon":"ngo"
+                    }
+                },{
+                    "type":"Feature",
+                    "geometry":{
+                        "type":"Polygon",
+                        "coordinates":[[[74.63754191994667,25.351334264031877],[74.63771425187588,25.35124230689628],[74.63762599043548,25.351128534462063],[74.6374624595046,25.35122844514737],[74.63747578673065,25.35125435070961],[74.63754191994667,25.351334264031877]]]
+                    },
+                    "properties":{
+                    
+                        "name":"Rashtriya Swayamsevak Sangh, Bhilwara",
+                        "icon":"ngo"
+                       
+                    }
+                },{
+                    "type":"Feature",
+                    "geometry":{
+                        "type":"Polygon",
+                        "coordinates":[[[76.6395218577236,12.325417167439838],[76.63961254991591,12.32533077655117],[76.63953619077802,12.325254212090499],[76.63940945640206,12.32537491370067],[76.63944985717535,12.325415365923973],[76.63948589935899,12.325384330716773],[76.6395218577236,12.325417167439838]]]
+                    },
+                    "properties":{
+                        "name":"Mysore Grahakara Parishat",
+                        "icon":"ngo"
+
+                        
+                    }
+                },{
+                    "type":"Feature",
+                    "geometry":{
+                        "type":"Point",
+                        "coordinates":[76.45764788612723,10.001113820219643]
+                    },
+                    "properties":{
+                    
+                        "name":"Synthite office",
+                        "icon":"ngo"
+                    }
+                },{
+                    "type":"Feature",
+                    "geometry":{
+                        "type":"Polygon","coordinates":[[[76.57656563445926,12.408127734889064],[76.57682564109564,12.407457618484372],[76.57676914706826,12.407173641198],[76.5765734296292,12.406976273117834],[76.57622977159917,12.406671011284104],[76.57608107663691,12.406591523630723],[76.57540868036449,12.407580164943255],[76.57656563445926,12.408127734889064]]]
+                    },
+                    "properties":{
+                        
+                        "name":"Samaja",
+                        "icon":"ngo"
+                    }
+                },{
+                    "type":"Feature",
+                    "geometry":{
+                        "type":"Point",
+                        "coordinates":[76.62936173379421,9.744970961969344]
+                    },
+                    "properties":{
+                       
+                        "name":"Y.M.C Palackattumala",
+                        "icon":"ngo"
+                        
+                    }
+                },{
+                    "type":"Feature",
+                    "geometry":{
+                        "type":"Polygon",
+                        "coordinates":[[[76.85926342383027,11.43087677278399],[76.85930063948035,11.430755427695374],[76.8592513538897,11.430740968155277],[76.8592272978276,11.430819263269797],[76.8591720610857,11.430802914134347],[76.85915881767869,11.43084596411714],[76.85926342383027,11.43087677278399]]]
+                    },
+                    "properties":{
+                        "name":"Keystone Foundation",
+                        "icon":"ngo"
+                       
+                    }
+                },{
+                    "type":"Feature",
+                    "geometry":{
+                        "type":"Point",
+                        "coordinates":[76.74545503221452,16.73678271937777]
+                    },
+                    "properties":{
+                       
+                        "name":"Training Centre",
+                        "icon":"ngo"
+                    
+                    }
+                },{
+                    "type":"Feature",
+                    "geometry":{
+                        "type":"Point",
+                        "coordinates":[76.32767382077873,32.207718154801356]
+                    },
+                    "properties":{
+                        "name":"The Himachal and Punjab Gorkha Association",
+                        "icon":"ngo"
+
+                    }
+                },{
+                    "type":"Feature",
+                    "geometry":{
+                        "type":"Point",
+                        "coordinates":[76.3684584852308,32.19819253025942]
+                    },
+                    "properties":{
+                        "name":"Jagori Grameen",
+                        "icon":"ngo"
+
+                    }
+                },{
+                    "type":"Feature",
+                    "geometry":{
+                        "type":"Point",
+                        "coordinates":[76.41365286894143,15.555789236375048]
+                    },
+                    "properties":{
+                        "name":"SAMUHA organisation",
+                        "icon":"ngo"
+                        
+                    }
+                },{
+                    "type":"Feature",
+                    "geometry":{
+                        "type":"Point",
+                        "coordinates":[76.62912217900157,12.289187165829347]
+                    },
+                    "properties":{
+                        "name":"IT for Change",
+                        "icon":"ngo"
+                        
+                    }
+                },{
+                    "type":"Feature",
+                    "geometry":{
+                        "type":"Point",
+                        "coordinates":[77.20539486967027,28.632840746463117]
+                    },
+                    "properties":{
+                        "name":"Communist party of India",
+                        "icon":"ngo"
+                    }
+                },{
+                    "type":"Feature",
+                    "geometry":{
+                        "type":"Point",
+                        "coordinates":[77.13278437033296,16.7602164030057]
+                    },
+                    "properties":{
+                      
+                        "name":"Kalike",
+                        "icon":"ngo"
+                       
+                    }
+                },{
+                    "type":"Feature",
+                    "geometry":{
+                        "type":"Point",
+                        "coordinates":[77.12949614971876,16.751783225725276]
+                    },
+                    "properties":{
+                        "name":"Dhan Foundation",
+                        "icon":"ngo"
+                        
+                    }
+                },{
+                    "type":"Feature",
+                    "geometry":{
+                        "type":"Point",
+                        "coordinates":[77.20601026900113,28.550800031758712]
+                    },
+                    "properties":{
+                        "name":"Centre for Internet and Society",
+                        "icon":"ngo"
+                    
+                    }
+                },{
+                    "type":"Feature",
+                    "geometry":{
+                        "type":"Point",
+                        "coordinates":[77.21347443759441,28.562654935025492]
+                    },
+                    "properties":{
+                        "name":"Chetna NGO",
+                        "icon":"ngo"
+                    }
+                },{
+                    "type":"Feature",
+                    "geometry":{
+                        "type":"Point",
+                        "coordinates":[77.48532637953758,12.831810864381879]
+                    },
+                    "properties":{
+                        "name":"E4D Banjarapalya Centre",
+                        "icon":"ngo"
+                        
+                    }
+                },{
+                    "type":"Feature",
+                    "geometry":{
+                        "type":"Point",
+                        "coordinates":[77.56235078908503,13.004135433261595]
+                    },
+                    "properties":{
+                        "name":"Innovation and Science Promotion Foundation",
+                        "icon":"ngo" 
+                    }
+                },{
+                    "type":"Feature",
+                    "geometry":{
+                        "type":"Polygon",
+                        "coordinates":[[[77.58061059750617,12.988529473119215],[77.58075065910816,12.98835207597996],[77.58020893670619,12.987473745920383],[77.5798820424825,12.988183662924826],[77.58061059750617,12.988529473119215]]]
+                    },
+                    "properties":{
+                        "name":"Gandhi Bhavan",
+                        "icon":"ngo"
+                      
+                    }
+                },{
+                    "type":"Feature",
+                    "geometry":{
+                        "type":"Point",
+                        "coordinates":[77.59713895618916,12.99090553713772]
+                    },
+                    "properties":{
+                        "name":"Janaagraha",
+                        "icon":"ngo"
+
+                    }
+                },{
+                    "type":"Feature",
+                    "geometry":{
+                        "type":"Point",
+                        "coordinates":[77.58302508853376,34.16537593465446]
+                    },
+                    "properties":{
+                        "name":"WWF for nature india",
+                        "icon":"ngo"
+                    }
+
+                },{
+                    "type":"Feature",
+                    "geometry":{
+                        "type":"Point",
+                        "coordinates":[77.53621098585427,12.969738557375578]
+                    },
+                    "properties":{
+                        "name":"Kalike",
+                        "icon":"ngo"
+                    }
+                },{
+                    "type":"Feature",
+                    "geometry":{
+                        "type":"Point",
+                        "coordinates":[77.60056983679533,12.981744269011017]
+                    },
+                    "properties":{
+                        "name":"Alternative Law Forum",
+                        "icon":"ngo"
+                    }
+                },{
+                    "type":"Feature",
+                    "geometry":{
+                        "type":"Polygon",
+                        "coordinates":[[[77.59876403957605,12.973504744378715],[77.59879739955068,12.973311817405616],[77.59891608729959,12.973299647155457],[77.59881382808089,12.972885939975825],[77.59899479337037,12.97285073603598],[77.59895229712129,12.972711880540174],[77.59890594519675,12.972709838547019],[77.59817814454436,12.972822556544571],[77.59828719310462,12.973464721437239],[77.59876403957605,12.973504744378715]]]
+                    },
+                    "properties":{
+                        "name":"The Churches' Council for Child and Youth Care",
+                        "icon":"ngo"
+                    }
+                },{
+                    "type":"Feature",
+                    "geometry":{
+                        "type":"Polygon",
+                        "coordinates":[[[77.58212453685701,12.937860459223359],[77.58223358541727,12.937858825400227],[77.5822288915515,12.937713741863107],[77.58212269283831,12.937715048922371],[77.58212453685701,12.937860459223359]]]
+                    },
+                    "properties":{
+                        "name":"Aarogya Seva",
+                        "icon":"ngo"
+            
+                    }
+                },{
+                    "type":"Feature",
+                    "geometry":{
+                        "type":"Point",
+                        "coordinates":[77.5890360865742,12.924913136961806]
+                    },
+                    "properties":{
+                        "name":"IT for change",
+                        "icon":"ngo"
+                    }
+                },{
+                    "type":"Feature",
+                    "geometry":{
+                        "type":"Point",
+                        "coordinates":[77.65713075175881,13.01014933121273]
+                    },
+                    "properties":{
+                        "name":"Pratham Book",
+                        "icon":"ngo"
+                    }
+                },{
+                    "type":"Feature",
+                    "geometry":{
+                        "type":"Point",
+                        "coordinates":[77.65712102875113,13.010071665489775]
+                    },
+                    "properties":{
+                        "name":"Akshara Foundation",
+                        "icon":"ngo"
+                       
+                    }
+                }
+            ]
+        }
+    }, 
+    "layout": {
+        "icon-image": "{icon}-15",
+        "text-field": "{name}",
+        "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+        "text-offset": [0, 0.6],
+        "text-anchor": "top"
+        }
+    });
+});
+</script>
+
+</body>
+</html>
